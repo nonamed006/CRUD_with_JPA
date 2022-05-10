@@ -36,7 +36,7 @@ public class BoardController {
 		return boardList;
 	}
 	//delete
-	@GetMapping("/del/{no}")
+	
 	public String delete(@PathVariable int no) {
 		boardService.delete(no);
 		return "success";

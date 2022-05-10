@@ -58,6 +58,7 @@ const BottomIn = styled.div`
 `
 const Board = () => {
 	const [boardList, setBoardList] = useState([]);
+	const [reload, setReload] = useState(false);
 	const [board, setBoard] = useState({
 		contents: "",
 		reg_date: "2022",
@@ -76,10 +77,9 @@ const Board = () => {
 	};
 
 	const createBoard =()=>{
-		console.log('들옴');
 		fetch(`${PORT}/board/write`, {
 			method: "post",
-			body: board,
+			body: JSON.stringify(board),
 			headers: {
 				'Content-Type': 'application/json'
 			}
@@ -87,13 +87,25 @@ const Board = () => {
 		}).then((res) => res.text())
 			.then((res) => {
 				console.log(res);
-				setBoardList(res);
+				setReload(!reload);
+			});
+	};
+
+	const deleteBoard = (no) => {
+		console.log(no);
+		fetch(`${PORT}/board/del/${no}`, {
+			method: "get",
+			// res에 결과가 들어옴
+		}).then((res) => res.text())
+			.then((res) => {
+				console.log(res);
+				setReload(!reload);
 			});
 	};
 
 	useEffect(()=>{
 		getBoard();
-	}, [])
+	}, [reload]);
 
 	const handleChange = (e) =>{
 		setBoard({...board, [e.target.id]: e.target.value});
@@ -109,7 +121,7 @@ const Board = () => {
 				{boardList.map(function (res, index) {
 					return <Intxt key={index}>
 						{res.contents}
-						<div style={{float:'right', marginRight: '10px', fontWeight: 'bold', color: '#20c997', cursor: 'pointer'}}>X</div>
+						<div onClick={(e)=>deleteBoard(res.no)} style={{float:'right', marginRight: '10px', fontWeight: 'bold', color: '#20c997', cursor: 'pointer'}}>X</div>
 					</Intxt>
 					})}
 				</MainBoard>
