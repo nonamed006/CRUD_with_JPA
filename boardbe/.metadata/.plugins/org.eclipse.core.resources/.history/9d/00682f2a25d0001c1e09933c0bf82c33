@@ -1,0 +1,11 @@
+package com.example.board.config.filter;
+
+import org.springframework.context.annotation.Configuration;
+
+import lombok.RequiredArgsConstructor;
+
+@Configuration
+public class FilterConfig {
+
+	
+}
