@@ -90,7 +90,7 @@ const Board = () => {
 				setReload(!reload);
 			});
 	};
-
+	
 	const deleteBoard = (no) => {
 		console.log(no);
 		fetch(`${PORT}/board/del/${no}`, {
@@ -126,7 +126,7 @@ const Board = () => {
 					})}
 				</MainBoard>
 				<BottomIn>
-					<InputBox id = "contents" onChange={handleChange}></InputBox>
+					<InputBox id = "contents" onChange={handleChange} value={board.contents}></InputBox>
 					<Button onClick={createBoard}>버튼</Button>
 					</BottomIn>
 			</Box>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=board/C:\/Users\/PC\/.m2\/repository\/org\/apache\/tomcat\/embed\/tomcat-embed-core\/9.0.62\/tomcat-embed-core-9.0.62.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.apache.tomcat.embed=/=/maven.artifactId=/tomcat-embed-core=/=/maven.version=/9.0.62=/=/maven.scope=/compile=/&lt;javax.servlet(Filter.class[Filter" modifiers="1537" timestamp="1650609786564"/>
+    <typeInfo handle="=board/C:\/Users\/PC\/Desktop\/sts-4.13.1.RELEASE\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\/jre\/lib\/jrt-fs.jar`java.logging=/maven.pomderived=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/&lt;java.util.logging(Filter.class[Filter" modifiers="1537" timestamp="1646277201088"/>
+    <typeInfo handle="=board/C:\/Users\/PC\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.6.4\/spring-data-jpa-2.6.4.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.6.4=/=/maven.scope=/compile=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1650850114743"/>
+</typeInfoHistroy>
